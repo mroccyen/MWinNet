@@ -1,0 +1,10 @@
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.csprojResolveAssemblyReference.cache
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.csproj.GenerateResource.Cache
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.pdb
+E:\GitHub\MWinNet\bin\MWinNet.Frame.dll
+E:\GitHub\MWinNet\bin\MWinNet.Frame.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.DockWindowLeft.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.Test.DockWindowTop.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.DockWindowButtom.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Debug\MWinNet.Frame.DockWindowRight.resources

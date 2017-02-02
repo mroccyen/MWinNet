@@ -1,0 +1,8 @@
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\bin\Debug\license.txt
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.pdb
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Resources.resources
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.Strings.resources
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\obj\Debug\WinFormsUI.csproj.GenerateResource.Cache
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\GitHub\MWinNet\bin\Plugins\WinFormsUI\obj\Debug\WeifenLuo.WinFormsUI.Docking.pdb

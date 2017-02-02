@@ -1,0 +1,5 @@
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\bin\Release\MWinNet.Core.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\bin\Release\MWinNet.Core.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\obj\Release\MWinNet.Core.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\obj\Release\MWinNet.Core.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\obj\Release\MWinNet.Core.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+
+菜单路径：/MWinNet/Menu
+工具栏路径：/MWinNet/ToolBar
+右键菜单路径： /MWinNet/ContextMenu
+浮动窗口路径：/MWinNet/DockBar 
+状态栏路径：/MWinNet/StatusBar

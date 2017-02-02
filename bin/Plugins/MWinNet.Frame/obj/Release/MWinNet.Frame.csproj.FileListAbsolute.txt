@@ -1,0 +1,5 @@
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Frame.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Frame.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.csprojResolveAssemblyReference.cache

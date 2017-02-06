@@ -7,40 +7,41 @@ namespace MWinNet.Frame
     public class FrameConstructor
     {
         private PluginTree _pluginTree = PluginTree.Instance;
-        private MenuConstructor _menuCreator = new MenuConstructor();
-        private DockPanelConstructor _dockConstructor = new DockPanelConstructor();
+        private MenuManage _menuManager = new MenuManage();
+        private DockManage _dockManage = new DockManage();
 
         public void Initialize()
         {
-            var dockPanel = _dockConstructor.CreateDockPanel();
-            WorkBenchUtil.AddControl(dockPanel);
-            DockWindowLeft form1 = new DockWindowLeft();
-            form1.Show(dockPanel);
-
             PluginManager.SetupPlugin();
-            ConfigureFrame();
             InitializeFrame();
+            ConfigureFrame();
         }
 
         private void ConfigureFrame()
         {
-            foreach (var plugin in PluginTree.Instance.Plugins)
+            foreach (var plugin in _pluginTree.Plugins)
             {
                 string curpath = plugin.PluginEntity.Path;
                 //如果插件为MenuItem
                 if (curpath.Contains(PluginConfig.MENUITEM))
                 {
                     List<string> pathList = StringToolkit.PathParse(curpath);
-                    _menuCreator.ConfigureMenuItem(pathList, plugin);
+                    _menuManager.ConfigureMenuItem(pathList, plugin);
+                }
+                //如果插件为DockBar
+                if (curpath.Contains(PluginConfig.DOCKBAR))
+                {
+                    _dockManage.SetupDockBar(plugin);
                 }
             }
+            //初始化菜单
+            _menuManager.SetupMenuItem();
         }
 
         private void InitializeFrame()
         {
-            _menuCreator.SetupMenuItem();
+            WorkBenchUtil.AddControl(DockPanelInstance.Instance);
             WorkBenchUtil.AddControl(Menu.Instance.MainMenu);
-            //WorkBenchUtil.AddControl(_dockConstructor.CreateDockPanel());
         }
     }
 }

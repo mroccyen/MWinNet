@@ -41,7 +41,7 @@ namespace MWinNet.Frame
             var obj = assembly.CreateInstance(typeName);
             if (obj == null)
             {
-                throw new NullReferenceException("获取Command失败。");
+                throw new NullReferenceException("获取type对象失败。");
             }
             return obj as T;
         }

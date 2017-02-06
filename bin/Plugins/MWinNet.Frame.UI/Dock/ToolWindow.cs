@@ -12,6 +12,7 @@ namespace MWinNet.Frame.UI
             // 
             this.ClientSize = new System.Drawing.Size(278, 244);
             this.Name = "ToolWindow";
+            this.ShowHint = MWinNet.Dock.DockState.Document;
             this.ShowIcon = false;
             this.ResumeLayout(false);
 

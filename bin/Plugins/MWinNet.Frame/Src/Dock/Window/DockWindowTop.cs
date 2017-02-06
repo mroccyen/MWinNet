@@ -1,6 +1,6 @@
 ﻿using MWinNet.Frame.UI;
 
-namespace MWinNet.Frame.Test
+namespace MWinNet.Frame
 {
     public partial class DockWindowTop : ToolWindow
     {

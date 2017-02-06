@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dock\DockPanelInstance.cs" />
     <Compile Include="Dock\ToolWindow.cs">
       <SubType>Form</SubType>
     </Compile>

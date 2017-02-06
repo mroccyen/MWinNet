@@ -4,12 +4,9 @@ using System.Collections.Generic;
 
 namespace MWinNet.Frame
 {
-    public class MenuConstructor
+    public class MenuManage
     {
-        /// <summary>
-        /// 菜单容器
-        /// </summary>
-        private List<List<MenuItem>> _menuContainer = new List<List<MenuItem>>();
+        private MenuItemContainer _container = new MenuItemContainer();
 
         public void ConfigureMenuItem(List<string> paths, Plugin plugin)
         {
@@ -18,7 +15,7 @@ namespace MWinNet.Frame
 
             for (int i = 0; i < paths.Count; i++)
             {
-                MenuItem existTopItem = CheckItem(paths[i], i);
+                MenuItem existTopItem = _container.CheckItem(paths[i], i);
                 if (existTopItem == null)
                 {
                     if (i == paths.Count - 1)
@@ -38,7 +35,7 @@ namespace MWinNet.Frame
                     {
                         curItem = new MenuItem(StringToolkit.GetLastString(paths[i]));
                     }
-                    AddItemToContainer(curItem, paths[i], i);
+                    _container.AddItem(curItem, paths[i], i);
                 }
                 else
                 {
@@ -46,7 +43,7 @@ namespace MWinNet.Frame
                 }
                 if (i != 0)
                 {
-                    MenuItem parentTopItem = CheckItem(paths[i - 1], i - 1);
+                    MenuItem parentTopItem = _container.CheckItem(paths[i - 1], i - 1);
                     parentTopItem.AddMenuItemRange(new System.Windows.Forms.ToolStripItem[] { curItem });
                 }
             }
@@ -54,35 +51,8 @@ namespace MWinNet.Frame
 
         public void SetupMenuItem()
         {
-            Menu.Instance.AddItemRange(_menuContainer[0].ToArray());
+            Menu.Instance.AddItemRange(_container.MenuContainer[0].ToArray());
         }
 
-        private MenuItem CheckItem(string path, int index)
-        {
-            MenuItem checkItem = null;
-            if (index > _menuContainer.Count - 1)
-            {
-                _menuContainer.Add(new List<MenuItem>());
-            }
-            foreach (var item in _menuContainer[index])
-            {
-                if ((item.Tag as string).Equals(path))
-                {
-                    checkItem = item;
-                    break;
-                }
-            }
-            return checkItem;
-        }
-
-        /// <summary>
-        /// 添加菜单到菜单容器
-        /// </summary>
-        /// <param name="topPath"></param>
-        private void AddItemToContainer(MenuItem item, string path, int index)
-        {
-            item.Tag = path;
-            _menuContainer[index].Add(item);
-        }
     }
 }

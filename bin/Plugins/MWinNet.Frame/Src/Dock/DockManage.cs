@@ -1,4 +1,6 @@
-﻿using MWinNet.Dock;
+﻿using MWinNet.Core;
+using MWinNet.Dock;
+using MWinNet.Frame.UI;
 using System;
 
 namespace MWinNet.Frame
@@ -44,6 +46,18 @@ namespace MWinNet.Frame
                     throw new Exception("参数不正确，找不到合适的DockState！");
             }
             return state;
+        }
+
+        public void SetupDockBar(Plugin plugin)
+        {
+            DockBarPlugin dockPlugin = plugin.PluginEntity as DockBarPlugin;
+            if (dockPlugin == null)
+            {
+                throw new NullReferenceException();
+            }
+            DockState state = GetDockState(dockPlugin.DockType);
+            ToolWindow window = AssemblyUtil.GetAssembly<ToolWindow>(dockPlugin.AssemblyName, dockPlugin.DockWindowClass);
+            window.Show(DockPanelInstance.Instance, state);
         }
     }
 }

@@ -10,7 +10,20 @@ namespace MWinNet.Core
 {
     public class PluginManager
     {
-        public static void SetupPlugin(string path)
+        public static void SetupPlugin()
+        {
+            DirectoryInfo[] directories = FileToolkit.GetDirectorys();
+            foreach (var dir in directories)
+            {
+                string[] files = FileToolkit.GetConfigFiles(dir.FullName);
+                foreach (var file in files)
+                {
+                    SetupPlugin(file);
+                }
+            }
+        }
+
+        private static void SetupPlugin(string path)
         {
             using (XmlReader reader = XmlReader.Create(path))
             {
@@ -35,13 +48,6 @@ namespace MWinNet.Core
             }
         }
 
-        public static void SetupPlugin()
-        {
-            FileInfo[] files = FileToolkit.GetFileInfo();
-            foreach (var file in files)
-            {
-                SetupPlugin(file.FullName);
-            }
-        }
+
     }
 }

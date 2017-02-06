@@ -3,3 +3,14 @@ E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Frame.pdb
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.dll
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.pdb
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.csprojResolveAssemblyReference.cache
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Core.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Dock.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Frame.UI.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Core.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Dock.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\bin\Release\MWinNet.Frame.UI.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.DockWindowButtom.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.DockWindowLeft.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.DockWindowRight.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.DockWindowTop.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Frame\obj\Release\MWinNet.Frame.csproj.GenerateResource.Cache

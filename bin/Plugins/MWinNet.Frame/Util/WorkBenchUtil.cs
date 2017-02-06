@@ -1,5 +1,4 @@
-﻿using MWinNet.Frame.UI;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace MWinNet.Frame
 {
@@ -19,9 +18,9 @@ namespace MWinNet.Frame
         public static void AddControl(Control control)
         {
             _workBench.SuspendLayout();
-            if ((control as UI.Menu) != null)
+            if ((control as Menu) != null)
             {
-                _workBench.MainMenuStrip = control as UI.Menu;
+                _workBench.MainMenuStrip = control as Menu;
             }
             _workBench.Controls.Add(control);
             _workBench.ResumeLayout(false);

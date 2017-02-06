@@ -43,43 +43,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Src\Dock\DockManage.cs" />
-    <Compile Include="Src\Dock\Window\DockWindowButtom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Src\Dock\Window\DockWindowButtom.Designer.cs">
-      <DependentUpon>DockWindowButtom.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Src\Dock\DockPanelInstance.cs" />
     <Compile Include="Src\Dock\DockWindowCollection.cs" />
-    <Compile Include="Src\Dock\Window\DockWindowRight.cs">
+    <Compile Include="Src\Dock\ToolWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Src\Dock\Window\DockWindowRight.Designer.cs">
-      <DependentUpon>DockWindowRight.cs</DependentUpon>
+    <Compile Include="Src\Menu\Menu.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Src\Dock\Window\DockWindowTop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Src\Dock\Window\DockWindowTop.Designer.cs">
-      <DependentUpon>DockWindowTop.cs</DependentUpon>
+    <Compile Include="Src\Menu\MenuItem.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Src\Menu\MenuItemContainer.cs" />
     <Compile Include="Util\AssemblyUtil.cs" />
     <Compile Include="Src\Menu\MenuManage.cs" />
-    <Compile Include="FrameConstructor.cs" />
+    <Compile Include="Src\FrameConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Src\Dock\Window\DockWindowLeft.cs">
+    <Compile Include="Util\WorkBenchUtil.cs" />
+    <Compile Include="Src\WorkBench\WorkBench.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Src\Dock\Window\DockWindowLeft.Designer.cs">
-      <DependentUpon>DockWindowLeft.cs</DependentUpon>
+    <Compile Include="Src\WorkBench\WorkBench.Designer.cs">
+      <DependentUpon>WorkBench.cs</DependentUpon>
     </Compile>
-    <Compile Include="Src\Dock\CreateCommand.cs" />
-    <Compile Include="Util\WorkBenchUtil.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MWinNet.Frame.config">
-      <SubType>Designer</SubType>
-    </None>
+    <Compile Include="Src\WorkBench\WorkBenchInstance.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MWinNet.Core\MWinNet.Core.csproj">
@@ -90,32 +77,19 @@
       <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
       <Name>MWinNet.Dock</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MWinNet.Frame.UI\MWinNet.Frame.UI.csproj">
-      <Project>{a06f273d-abfb-4add-9cb0-74f0d701b4fc}</Project>
-      <Name>MWinNet.Frame.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Src\Dock\Window\DockWindowButtom.resx">
-      <DependentUpon>DockWindowButtom.cs</DependentUpon>
+    <EmbeddedResource Include="Src\Dock\ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Src\Dock\Window\DockWindowLeft.resx">
-      <DependentUpon>DockWindowLeft.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Src\Dock\Window\DockWindowRight.resx">
-      <DependentUpon>DockWindowRight.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Src\Dock\Window\DockWindowTop.resx">
-      <DependentUpon>DockWindowTop.cs</DependentUpon>
+    <EmbeddedResource Include="Src\WorkBench\WorkBench.resx">
+      <DependentUpon>WorkBench.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y $(ProjectDir)MWinNet.Frame.config $(SolutionDir)Environment</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

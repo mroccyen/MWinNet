@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A67F80B-C203-4C4A-8089-2B8448C4EFAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MWinNet.MainFrame</RootNamespace>
+    <AssemblyName>MWinNet.MainFrame</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Environment\MainFrame\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Window\DockWindowButtom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\DockWindowButtom.Designer.cs">
+      <DependentUpon>DockWindowButtom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\DockWindowLeft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\DockWindowLeft.Designer.cs">
+      <DependentUpon>DockWindowLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\DockWindowRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\DockWindowRight.Designer.cs">
+      <DependentUpon>DockWindowRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\DockWindowTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\DockWindowTop.Designer.cs">
+      <DependentUpon>DockWindowTop.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MWinNet.MainFrame.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MWinNet.Core\MWinNet.Core.csproj">
+      <Project>{030878cd-2f6d-4ac4-a3c7-353b4d96c467}</Project>
+      <Name>MWinNet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MWinNet.Dock\MWinNet.Dock.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>MWinNet.Dock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MWinNet.Frame\MWinNet.Frame.csproj">
+      <Project>{60705ed7-a5fc-49be-87a9-918b11a1c33f}</Project>
+      <Name>MWinNet.Frame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Window\DockWindowButtom.resx">
+      <DependentUpon>DockWindowButtom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\DockWindowLeft.resx">
+      <DependentUpon>DockWindowLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\DockWindowRight.resx">
+      <DependentUpon>DockWindowRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\DockWindowTop.resx">
+      <DependentUpon>DockWindowTop.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y $(ProjectDir)MWinNet.MainFrame.config $(SolutionDir)Environment\MainFrame</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

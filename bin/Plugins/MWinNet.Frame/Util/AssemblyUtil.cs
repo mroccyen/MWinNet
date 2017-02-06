@@ -1,5 +1,6 @@
 ﻿using MWinNet.Core;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -7,29 +8,32 @@ namespace MWinNet.Frame
 {
     public class AssemblyUtil
     {
-        /// <summary>
-        /// 获取当前环境的执行路径
-        /// </summary>
-        public static string AssemblyPath
-        {
-            get { return Environment.CurrentDirectory; }
-        }
-
         public static string[] GetDlls()
         {
-            return Directory.GetFiles(Environment.CurrentDirectory, "*.dll");
+            List<string> dllFiles = new List<string>();
+            DirectoryInfo[] directorys = FileToolkit.GetDirectorys();
+            foreach (var dir in directorys)
+            {
+                string[] paths = FileToolkit.GetDllFiles(dir.FullName);
+                dllFiles.AddRange(paths);
+            }
+            return dllFiles.ToArray();
         }
 
         public static string GetDll(string assemblyName)
         {
             string returnPath = null;
-            string[] paths = Directory.GetFiles(Environment.CurrentDirectory, "*.dll");
-            foreach (var path in paths)
+            DirectoryInfo[] directorys = FileToolkit.GetDirectorys();
+            foreach (var dir in directorys)
             {
-                if (path.Contains(assemblyName))
+                string[] paths = FileToolkit.GetDllFiles(dir.FullName);
+                foreach (var path in paths)
                 {
-                    returnPath = path;
-                    break;
+                    if (path.Contains(assemblyName))
+                    {
+                        returnPath = path;
+                        break;
+                    }
                 }
             }
             return returnPath;

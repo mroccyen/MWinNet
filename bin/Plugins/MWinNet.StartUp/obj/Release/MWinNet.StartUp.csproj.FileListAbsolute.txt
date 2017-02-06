@@ -1,9 +1,7 @@
-E:\GitHub\MWinNet\bin\Plugins\MWinNet.StartUp\obj\Release\MWinNet.StartUp.WorkBench.resources
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.StartUp\obj\Release\MWinNet.StartUp.Properties.Resources.resources
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.StartUp\obj\Release\MWinNet.StartUp.csproj.GenerateResource.Cache
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.StartUp\obj\Release\MWinNet.exe
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.StartUp\obj\Release\MWinNet.pdb
-E:\GitHub\MWinNet\bin\MWinNet.exe.config
 E:\GitHub\MWinNet\bin\MWinNet.exe
 E:\GitHub\MWinNet\bin\MWinNet.pdb
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.StartUp\obj\Release\MWinNet.StartUp.csprojResolveAssemblyReference.cache

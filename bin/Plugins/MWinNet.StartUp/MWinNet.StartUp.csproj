@@ -105,10 +105,6 @@
       <Project>{030878cd-2f6d-4ac4-a3c7-353b4d96c467}</Project>
       <Name>MWinNet.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MWinNet.Frame.UI\MWinNet.Frame.UI.csproj">
-      <Project>{a06f273d-abfb-4add-9cb0-74f0d701b4fc}</Project>
-      <Name>MWinNet.Frame.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MWinNet.Frame\MWinNet.Frame.csproj">
       <Project>{60705ed7-a5fc-49be-87a9-918b11a1c33f}</Project>
       <Name>MWinNet.Frame</Name>

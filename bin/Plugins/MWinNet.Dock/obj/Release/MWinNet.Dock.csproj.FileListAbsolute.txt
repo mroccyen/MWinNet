@@ -1,0 +1,8 @@
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\bin\Release\MWinNet.Dock.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\bin\Release\MWinNet.Dock.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Release\MWinNet.Dock.csprojResolveAssemblyReference.cache
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Release\MWinNet.Dock.Resources.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Release\MWinNet.Dock.Strings.resources
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Release\MWinNet.Dock.csproj.GenerateResource.Cache
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Release\MWinNet.Dock.dll
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Release\MWinNet.Dock.pdb

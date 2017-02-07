@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MWinNet.Core
 {
-    public class StringToolkit
+    public partial class CommonToolkit
     {
         public static List<string> PathParse(string str)
         {

@@ -70,7 +70,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MWinNet.MainFrame.config" />
+    <None Include="MWinNet.MainFrame.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.txt" />

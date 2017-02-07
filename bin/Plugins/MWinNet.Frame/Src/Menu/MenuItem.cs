@@ -8,28 +8,11 @@ namespace MWinNet.Frame
     {
         private Command _command;
 
-        public MenuItem(Command cmd, string caption)
+        public MenuItem(Command cmd)
         {
-            if (cmd != null)
-            {
-                this._command = cmd;
-                this.Enabled = _command.Enable();
-            }
-            this.Text = caption;
+            this._command = cmd;
+            this.Enabled = _command == null ? true : _command.Enable();
             this.Click += MenuItem_Click;
-        }
-
-        public MenuItem(string caption)
-        {
-            this.Text = caption;
-            this.Enabled = true;
-        }
-
-        public void InitializeMenuItem(MenuPlugin menuEntity)
-        {
-            this.Name = menuEntity.Caption;
-            this.Size = new System.Drawing.Size(52, 28);
-            this.Text = menuEntity.Caption;
         }
 
         public void AddMenuItemRange(ToolStripItem[] range)

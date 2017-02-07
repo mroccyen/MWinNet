@@ -1,20 +1,19 @@
-﻿using MWinNet.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace MWinNet.Frame
+namespace MWinNet.Core
 {
-    public class AssemblyUtil
+    public class AssemblyInstance
     {
         public static string[] GetDlls()
         {
             List<string> dllFiles = new List<string>();
-            DirectoryInfo[] directorys = FileToolkit.GetDirectorys();
+            DirectoryInfo[] directorys = CommonToolkit.GetEnvironmentDirectorys();
             foreach (var dir in directorys)
             {
-                string[] paths = FileToolkit.GetDllFiles(dir.FullName);
+                string[] paths = CommonToolkit.GetDllFiles(dir.FullName);
                 dllFiles.AddRange(paths);
             }
             return dllFiles.ToArray();
@@ -23,10 +22,10 @@ namespace MWinNet.Frame
         public static string GetDll(string assemblyName)
         {
             string returnPath = null;
-            DirectoryInfo[] directorys = FileToolkit.GetDirectorys();
+            DirectoryInfo[] directorys = CommonToolkit.GetEnvironmentDirectorys();
             foreach (var dir in directorys)
             {
-                string[] paths = FileToolkit.GetDllFiles(dir.FullName);
+                string[] paths = CommonToolkit.GetDllFiles(dir.FullName);
                 foreach (var path in paths)
                 {
                     if (path.Contains(assemblyName))
@@ -39,13 +38,13 @@ namespace MWinNet.Frame
             return returnPath;
         }
 
-        public static T GetAssembly<T>(string path, string typeName) where T : class
+        public static T ActivateObject<T>(string path, string typeName) where T : class
         {
             Assembly assembly = Assembly.LoadFrom(path);
             var obj = assembly.CreateInstance(typeName);
             if (obj == null)
             {
-                throw new NullReferenceException("获取type对象失败。");
+                throw new NullReferenceException();
             }
             return obj as T;
         }

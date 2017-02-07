@@ -3,7 +3,7 @@ using System.IO;
 
 namespace MWinNet.Core
 {
-    public class FileToolkit
+    public partial class CommonToolkit
     {
         public static string[] GetDllFiles(string directoryPath)
         {
@@ -17,11 +17,22 @@ namespace MWinNet.Core
             return files;
         }
 
-        public static DirectoryInfo[] GetDirectorys()
+        public static DirectoryInfo[] GetEnvironmentDirectorys()
         {
             string exePath = Environment.CurrentDirectory;
             DirectoryInfo info = new DirectoryInfo(Directory.GetParent(exePath).FullName + @"\Environment");
             return info.GetDirectories();
+        }
+
+        public static string GetResourceDirectory(string imgPath)
+        {
+            string exePath = Environment.CurrentDirectory;
+            DirectoryInfo info = new DirectoryInfo(Directory.GetParent(exePath).FullName);
+            if (!imgPath.StartsWith("\\"))
+            {
+                return info.FullName + "\\" + imgPath;
+            }
+            return info.FullName + imgPath;
         }
     }
 }

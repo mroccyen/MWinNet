@@ -55,8 +55,8 @@ namespace MWinNet.Frame
                 throw new NullReferenceException();
             }
             DockState state = GetDockState(dockPlugin.DockType);
-            string assemblyPath = AssemblyUtil.GetDll(plugin.PluginEntity.AssemblyName);
-            ToolWindow window = AssemblyUtil.GetAssembly<ToolWindow>(assemblyPath, dockPlugin.DockWindowClass);
+            string assemblyPath = AssemblyInstance.GetDll(plugin.PluginEntity.AssemblyName);
+            ToolWindow window = AssemblyInstance.ActivateObject<ToolWindow>(assemblyPath, dockPlugin.DockWindowClass);
             window.Show(DockPanelInstance.Instance, state);
         }
     }

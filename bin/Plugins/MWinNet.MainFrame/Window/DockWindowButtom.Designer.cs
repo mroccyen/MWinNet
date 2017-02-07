@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 402);
+            this.ClientSize = new System.Drawing.Size(520, 393);
             this.Name = "DockWindowButtom";
             this.ShowHint = MWinNet.Dock.DockState.Document;
             this.Text = "DockWindowButtom";

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Src\Application\FrameApplication.cs" />
     <Compile Include="Src\Dock\DockManage.cs" />
     <Compile Include="Src\Dock\DockPanelInstance.cs" />
     <Compile Include="Src\Dock\DockWindowCollection.cs" />
@@ -55,11 +56,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Src\Menu\MenuItemContainer.cs" />
-    <Compile Include="Util\AssemblyUtil.cs" />
+    <Compile Include="Src\Menu\MenuItemFactory.cs" />
     <Compile Include="Src\Menu\MenuManage.cs" />
-    <Compile Include="Src\FrameConstructor.cs" />
+    <Compile Include="Src\Application\ApplicationConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\WorkBenchUtil.cs" />
     <Compile Include="Src\WorkBench\WorkBench.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +85,9 @@
     <EmbeddedResource Include="Src\WorkBench\WorkBench.resx">
       <DependentUpon>WorkBench.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Src\ToolBar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

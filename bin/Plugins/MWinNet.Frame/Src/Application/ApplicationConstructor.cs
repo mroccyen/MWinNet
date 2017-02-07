@@ -3,7 +3,7 @@ using MWinNet.Core;
 
 namespace MWinNet.Frame
 {
-    public class FrameConstructor
+    public class ApplicationConstructor
     {
         private PluginTree _pluginTree = PluginTree.Instance;
         private MenuManage _menuManager = new MenuManage();
@@ -24,7 +24,7 @@ namespace MWinNet.Frame
                 //如果插件为MenuItem
                 if (curpath.Contains(PluginConfig.MENUITEM))
                 {
-                    List<string> pathList = StringToolkit.PathParse(curpath);
+                    List<string> pathList = CommonToolkit.PathParse(curpath);
                     _menuManager.ConfigureMenuItem(pathList, plugin);
                 }
                 //如果插件为DockBar
@@ -39,8 +39,8 @@ namespace MWinNet.Frame
 
         private void ConfigureFrame()
         {
-            WorkBenchUtil.AddControl(DockPanelInstance.Instance);
-            WorkBenchUtil.AddControl(Menu.Instance.MainMenu);
+            WorkBenchInstance.Instance.AddControl(DockPanelInstance.Instance);
+            WorkBenchInstance.Instance.AddControl(Menu.Instance.MainMenu);
         }
     }
 }

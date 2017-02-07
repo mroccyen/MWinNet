@@ -12,10 +12,10 @@ namespace MWinNet.Core
     {
         public static void SetupPlugin()
         {
-            DirectoryInfo[] directories = FileToolkit.GetDirectorys();
+            DirectoryInfo[] directories = CommonToolkit.GetEnvironmentDirectorys();
             foreach (var dir in directories)
             {
-                string[] files = FileToolkit.GetConfigFiles(dir.FullName);
+                string[] files = CommonToolkit.GetConfigFiles(dir.FullName);
                 foreach (var file in files)
                 {
                     SetupPlugin(file);

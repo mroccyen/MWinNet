@@ -18,7 +18,8 @@ namespace MWinNet.Core
         {
             get; set;
         }
-        public string Icon
+
+        public string Image
         {
             get; set;
         }
@@ -55,7 +56,7 @@ namespace MWinNet.Core
                     this.Path = reader.GetAttribute("path");
                     this.Id = reader.GetAttribute("id");
                     this.Caption = reader.GetAttribute("caption");
-                    this.Icon = reader.GetAttribute("icon");
+                    this.Image = reader.GetAttribute("image");
                     this.Index = reader.GetAttribute("index");
                     this.AssemblyName = reader.GetAttribute("assemblyName");
                     this.ClassName = reader.GetAttribute("className");

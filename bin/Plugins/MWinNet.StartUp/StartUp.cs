@@ -14,7 +14,7 @@ namespace MWinNet.StartUp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(WorkBenchUtil.WorkBench);
+            Application.Run(WorkBenchInstance.Instance.WorkBench);
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using MWinNet.Core;
+﻿using MWinNet.Dock;
 using System;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace MWinNet.Frame
 {

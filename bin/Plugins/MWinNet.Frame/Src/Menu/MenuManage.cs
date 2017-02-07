@@ -6,6 +6,7 @@ namespace MWinNet.Frame
     public class MenuManage
     {
         private MenuItemContainer _container = new MenuItemContainer();
+        private MenuItemFactory _menuFactory = new MenuItemFactory();
 
         public void ConfigureMenuItem(List<string> paths, Plugin plugin)
         {
@@ -14,31 +15,22 @@ namespace MWinNet.Frame
 
             for (int i = 0; i < paths.Count; i++)
             {
-                MenuItem existTopItem = _container.CheckItem(paths[i], i);
-                if (existTopItem == null)
+                MenuItem existItem = _container.CheckItem(paths[i], i);
+                if (existItem == null)
                 {
                     if (i == paths.Count - 1)
                     {
-                        if (plugin.PluginEntity.AssemblyName != null && plugin.PluginEntity.ClassName != null)
-                        {
-                            string assemblyPath = AssemblyUtil.GetDll(plugin.PluginEntity.AssemblyName);
-                            Command cmd = AssemblyUtil.GetAssembly<Command>(assemblyPath, plugin.PluginEntity.ClassName);
-                            curItem = new MenuItem(cmd, (plugin.PluginEntity as MenuPlugin).Caption);
-                        }
-                        else
-                        {
-                            curItem = new MenuItem(StringToolkit.GetLastString((plugin.PluginEntity as MenuPlugin).Caption));
-                        }
+                        curItem = _menuFactory.GetMenuItem(plugin.PluginEntity as MenuPlugin);
                     }
                     else
                     {
-                        curItem = new MenuItem(StringToolkit.GetLastString(paths[i]));
+                        curItem = _menuFactory.GetMenuItem(CommonToolkit.GetLastString(paths[i]));
                     }
                     _container.AddItem(curItem, paths[i], i);
                 }
                 else
                 {
-                    curItem = existTopItem;
+                    curItem = existItem;
                 }
                 if (i != 0)
                 {
@@ -52,6 +44,5 @@ namespace MWinNet.Frame
         {
             Menu.Instance.AddItemRange(_container.MenuContainer[0].ToArray());
         }
-
     }
 }

@@ -49,7 +49,7 @@ namespace MWinNet.Core
 
         public void SetupPluginTreeNode(PluginTreeNode treeNode)
         {
-            List<string> pathList = StringToolkit.PathParse(treeNode.Plugin.PluginEntity.Path);
+            List<string> pathList = CommonToolkit.PathParse(treeNode.Plugin.PluginEntity.Path);
             SetupPluginTreeNode(_rootNode, treeNode, pathList, 0);
         }
 

@@ -1,6 +1,6 @@
-﻿namespace MWinNet.MainFrame
+﻿namespace MWinNet.Frame
 {
-    partial class DockWindowButtom
+    partial class ToolWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // DockWindowButtom
+            // ToolWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 393);
-            this.Name = "DockWindowButtom";
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "ToolWindow";
             this.ShowHint = MWinNet.Dock.DockState.Document;
-            this.Text = "DockWindowButtom";
+            this.Text = "ToolWindow";
             this.ResumeLayout(false);
 
         }

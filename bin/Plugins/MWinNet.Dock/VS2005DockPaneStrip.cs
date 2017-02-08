@@ -754,7 +754,7 @@ namespace MWinNet.Dock
             int totalAllocatedWidth = 0;
             int averageWidth = totalWidth / countTabs;
             int remainedTabs = countTabs;
-            for (anyWidthWithinAverage = true; anyWidthWithinAverage && remainedTabs > 0; )
+            for (anyWidthWithinAverage = true; anyWidthWithinAverage && remainedTabs > 0;)
             {
                 anyWidthWithinAverage = false;
                 foreach (TabVS2005 tab in Tabs)
@@ -1082,7 +1082,7 @@ namespace MWinNet.Dock
 
             GraphicsPath.Reset();
             Rectangle rect = GetTabRectangle(Tabs.IndexOf(tab));
-            
+
             // Shorten TabOutline so it doesn't get overdrawn by icons next to it
             rect.Intersect(TabsRectangle);
             rect.Width--;
@@ -1272,7 +1272,14 @@ namespace MWinNet.Dock
                 Color startColor = DockPane.DockPanel.Skin.DockPaneStripSkin.ToolWindowGradient.ActiveTabGradient.StartColor;
                 Color endColor = DockPane.DockPanel.Skin.DockPaneStripSkin.ToolWindowGradient.ActiveTabGradient.EndColor;
                 LinearGradientMode gradientMode = DockPane.DockPanel.Skin.DockPaneStripSkin.ToolWindowGradient.ActiveTabGradient.LinearGradientMode;
-                g.FillPath(new LinearGradientBrush(rectTab, startColor, endColor, gradientMode), path);
+                try
+                {
+                    g.FillPath(new LinearGradientBrush(rectTab, startColor, endColor, gradientMode), path);
+                }
+                catch (Exception ex)
+                {
+                    //由于主题的原因，不处理
+                }
                 g.DrawPath(PenToolWindowTabBorder, path);
 
                 Color textColor = DockPane.DockPanel.Skin.DockPaneStripSkin.ToolWindowGradient.ActiveTabGradient.TextColor;

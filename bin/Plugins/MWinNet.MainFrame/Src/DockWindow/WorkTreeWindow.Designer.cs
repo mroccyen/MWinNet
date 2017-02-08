@@ -1,6 +1,6 @@
 ﻿namespace MWinNet.MainFrame
 {
-    partial class DockWindowLeft
+    partial class WorkTreeWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkTreeWindow));
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "点击";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // DockWindowLeft
+            // WorkTreeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(397, 311);
-            this.Controls.Add(this.button1);
-            this.Name = "DockWindowLeft";
-            this.ShowHint = MWinNet.Dock.DockState.Document;
-            this.Text = "DockWindowLeft";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "WorkTreeWindow";
+            this.Text = "WorkTreeWindow";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
     }
 }

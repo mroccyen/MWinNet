@@ -1,10 +1,10 @@
-﻿using MWinNet.Dock;
+﻿using CCWin;
 using System;
 using System.Windows.Forms;
 
 namespace MWinNet.Frame
 {
-    public partial class WorkBench : Form
+    public partial class WorkBench : Skin_Metro
     {
         public WorkBench()
         {

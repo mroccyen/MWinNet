@@ -1,6 +1,6 @@
 ﻿namespace MWinNet.MainFrame
 {
-    partial class DockWindowRight
+    partial class WorkPropertyWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkPropertyWindow));
             this.SuspendLayout();
             // 
-            // DockWindowRight
+            // WorkPropertyWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 437);
-            this.Name = "DockWindowRight";
-            this.ShowHint = MWinNet.Dock.DockState.Document;
-            this.Text = "DockWindowRight";
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(441, 347);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "WorkPropertyWindow";
+            this.Text = "WorkPropertyWindow";
             this.ResumeLayout(false);
 
         }

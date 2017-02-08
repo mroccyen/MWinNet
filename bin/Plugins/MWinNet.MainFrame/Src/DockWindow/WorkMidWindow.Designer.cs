@@ -1,6 +1,6 @@
 ﻿namespace MWinNet.MainFrame
 {
-    partial class DockWindowTop
+    partial class WorkMidWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkMidWindow));
             this.SuspendLayout();
             // 
-            // DockWindowTop
+            // WorkMidWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 327);
-            this.Name = "DockWindowTop";
-            this.ShowHint = MWinNet.Dock.DockState.Document;
-            this.Text = "DockWindowTop";
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(456, 326);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "WorkMidWindow";
+            this.Text = "WorkMidWindow";
             this.ResumeLayout(false);
 
         }

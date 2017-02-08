@@ -54,10 +54,16 @@ namespace MWinNet.Frame
             {
                 throw new NullReferenceException();
             }
-            DockState state = GetDockState(dockPlugin.DockType);
-            string assemblyPath = AssemblyInstance.GetDll(plugin.PluginEntity.AssemblyName);
-            ToolWindow window = AssemblyInstance.ActivateObject<ToolWindow>(assemblyPath, dockPlugin.DockWindowClass);
-            window.Show(DockPanelInstance.Instance, state);
+            if (dockPlugin.AssemblyName != string.Empty && dockPlugin.AssemblyName != null
+               && dockPlugin.DockWindowClass != string.Empty && dockPlugin.DockWindowClass != null)
+            {
+                DockState state = GetDockState(dockPlugin.DockType);
+                string assemblyPath = AssemblyInstance.GetDll(plugin.PluginEntity.AssemblyName);
+                ToolWindow window = AssemblyInstance.ActivateObject<ToolWindow>(assemblyPath, dockPlugin.DockWindowClass);
+                window.Show(DockPanelInstance.Instance, state);
+            }
         }
+
+
     }
 }

@@ -1,4 +1,3 @@
-E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.csprojResolveAssemblyReference.cache
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.Resources.resources
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.Strings.resources
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.csproj.GenerateResource.Cache

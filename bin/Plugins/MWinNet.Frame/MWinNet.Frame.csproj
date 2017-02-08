@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\library\CSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -46,8 +49,11 @@
     <Compile Include="Src\Dock\DockManage.cs" />
     <Compile Include="Src\Dock\DockPanelInstance.cs" />
     <Compile Include="Src\Dock\DockWindowCollection.cs" />
-    <Compile Include="Src\Dock\ToolWindow.cs">
+    <Compile Include="Src\Dock\Window\ToolWindow.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Src\Dock\Window\ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Src\Menu\Menu.cs">
       <SubType>Component</SubType>
@@ -60,6 +66,7 @@
     <Compile Include="Src\Menu\MenuManage.cs" />
     <Compile Include="Src\Application\ApplicationConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\ViewContent\Interface\IViewContent.cs" />
     <Compile Include="Src\WorkBench\WorkBench.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +86,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Src\Dock\ToolWindow.resx">
+    <EmbeddedResource Include="Src\Dock\Window\ToolWindow.resx">
       <DependentUpon>ToolWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Src\WorkBench\WorkBench.resx">

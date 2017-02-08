@@ -1,11 +1,12 @@
 ﻿
 using MWinNet.Frame;
+using System.Windows.Forms;
 
 namespace MWinNet.MainFrame
 {
-    public partial class DockWindowButtom : ToolWindow
+    public partial class WorkTreeWindow : ToolWindow
     {
-        public DockWindowButtom()
+        public WorkTreeWindow()
         {
             InitializeComponent();
         }

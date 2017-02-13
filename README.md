@@ -34,8 +34,181 @@ IViewContent接口是给DockWindow中添加控件的接口，每个实现了IVie
 类库基于WeifenLuo.WinFormsUI.Docking修改而来。
 
 ## 框架指南
+
 ### 配置文件
+配置文件示例格式如下：
+
+```
+<Plugin  name="FrameConfig"
+           author="meaglecyen"
+           version="1.0.0"
+           description=""
+           initialized="true">
+
+  <Menu>
+    <MenuTab path="/MWinNet/Menu/File" id="File" caption="File(F)"  index="0"></MenuTab>
+    <MenuTab path="/MWinNet/Menu/View" id="View" caption="View(V)" index="1"></MenuTab>
+
+    <MenuItem path="/MWinNet/Menu/File/Create"
+              id="Create"
+              caption="Create"
+              image="Resource\MainFrame\Test.png"
+              index="0"
+              assemblyName="MWinNet.MainFrame.dll"
+              className="MWinNet.MainFrame.CreateCommand">
+    </MenuItem>
+
+    <MenuDropGroup path="/MWinNet/Menu/File/Open"
+              id="Open"
+              caption="Open"
+              image=""
+              index="1">
+      <MenuItem path="/MWinNet/Menu/File/Open/Project"
+                id="Project"
+                caption="Project"
+                image=""
+                index="0">
+      </MenuItem>
+      <MenuItem path="/MWinNet/Menu/File/Open/TreeLir"
+                 id="TreeLir"
+                 caption="TreeLir"
+                 image="Resource\MainFrame\Test.png"
+                 index="1">
+      </MenuItem>
+    </MenuDropGroup>
+  </Menu>
+
+  <DockBar>
+    <DockItem path="/MWinNet/DockBar/Frame/Left"
+              id="Left"
+              dockType="DockLeft"
+              dockWindowClass="MWinNet.MainFrame.WorkTreeWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Right"
+              id="Right"
+              dockType="DockRightAutoHide"
+              dockWindowClass="MWinNet.MainFrame.WorkPropertyWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Middle"
+              id="Middle"
+              dockType="Document"
+              dockWindowClass="MWinNet.MainFrame.WorkMidWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Middle"
+              id="Middle"
+              dockType="Document"
+              dockWindowClass="MWinNet.MainFrame.WorkMidWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Buttom"
+          id="Buttom"
+          dockType="DockBottomAutoHide"
+          dockWindowClass="MWinNet.MainFrame.OutputWindow"
+          assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+  </DockBar>
+
+</Plugin>
+```
+
+#### Menu节点
+ Menu是菜单节点，所有的菜单项都在该节点下定义，在Menu节点中有三个子节点，MenuTab、MenuGroup、MenuItem。MenuTab是每个菜单Tab的定义节点，MenuItem是每个菜单项的定义节点，MenuGroup可以包含一个或者多个MenuItem节点。
+
+ 属性：
+
+ - path：每个菜单项都对应一个路径，该路径会添加进插件树中相应的分支中。
+ - id：每个菜单项的唯一标识。
+ - caption：每个菜单项的名称。
+ - image：每个菜单项的图标。
+ - index：菜单项索引值。
+ - assemblyName：菜单项命令对应的类名所在的程序集。
+ - className：菜单项命令对应的类名，需要加上命名空间。
+ 
+#### DockBar节点
+DockBar是浮动窗口节点。所有的浮动的窗口的定义都在DockBar节点中。
+DockBar下有DockItem子节点，定义每个浮动窗口的属性。
+
+属性：
+
+- path：每个浮动窗口对应一个路径，该路径会添加进插件树中相应的分支中。
+- id：DockBar唯一的标识。
+- dockType：DockBar的类型，有Float、DockTopAutoHide、DockLeftAutoHide、DockBottomAutoHide、DockRightAutoHide、Document、DockTop、DockLeft、DockBottom和DockRight。
+- dockWindowClass：浮动窗体对应的窗体类型名，需要加上命名空间。
+- assemblyName：浮动窗体对应的窗体所在的程序集。
 
 ### Command
 
+每个界面元素，如菜单、工具栏等都可以点击然后去实现相应的功能，通过抽象，我把功能代码从界面中抽离了出来，单独放在了一个实现了Command接口的类中。
+
+command类实现了ICommand接口，里面有两个方法:
+
+```
+    public abstract class Command : ICommand
+    {
+        public abstract void Run();
+        public abstract bool Enable();
+    }
+```
+
+- Run：具体的功能代码。
+- Enable：设置是否可用。
+
+示例：
+
+```
+    public class CreateCommand : Command
+    {
+        public override bool Enable()
+        {
+            return true;
+        }
+
+        public override void Run()
+        {
+            MessageBox.Show("Hello World！");
+        }
+    }
+```
+
 ### IViewContent
+
+IViewContent接口是给DockWindow中添加控件的接口。
+
+```
+    public interface IViewContent
+    {
+        Control ViewControl { get; set; }
+    }
+```
+
+实现IViewContent可以给需要添加的窗口添加控件，这样让窗体尽可能多的关系业务逻辑。
+
+示例代码：
+
+```
+    public class MidViewContent : IViewContent
+    {
+        public MidViewContent()
+        {
+
+        }
+
+        private RichTextBox _box = new RichTextBox();
+        public Control ViewControl
+        {
+            get
+            {
+                _box.Dock = DockStyle.Fill;
+                _box.Name = "RichTextBox";
+                return _box;
+            }
+            set
+            {
+                _box = (RichTextBox)value;
+            }
+        }
+    }
+```

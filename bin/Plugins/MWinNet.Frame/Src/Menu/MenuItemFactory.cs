@@ -5,26 +5,26 @@ namespace MWinNet.Frame
 {
     public class MenuItemFactory
     {
-        public MenuItem GetMenuItem(MenuPlugin menuEntity)
+        public MenuItem GetMenuItem(MenuPlugin menuPlugin)
         {
             MenuItem item = null;
-            if (menuEntity.AssemblyName != string.Empty && menuEntity.AssemblyName != null
-                && menuEntity.ClassName != string.Empty && menuEntity.ClassName != null)
+            if (menuPlugin.AssemblyName != string.Empty && menuPlugin.AssemblyName != null
+                && menuPlugin.ClassName != string.Empty && menuPlugin.ClassName != null)
             {
-                string assemblyPath = AssemblyInstance.GetDll(menuEntity.AssemblyName);
-                Command cmd = AssemblyInstance.ActivateObject<Command>(assemblyPath, menuEntity.ClassName);
+                string assemblyPath = AssemblyInstance.GetDll(menuPlugin.AssemblyName);
+                Command cmd = AssemblyInstance.ActivateObject<Command>(assemblyPath, menuPlugin.ClassName);
                 item = new MenuItem(cmd);
             }
             else
             {
                 item = new MenuItem(null);
             }
-            if (menuEntity.Image != string.Empty && menuEntity.Image != null)
+            if (menuPlugin.Image != string.Empty && menuPlugin.Image != null)
             {
-                string imagePath = CommonToolkit.GetResourceDirectory(menuEntity.Image);
+                string imagePath = CommonToolkit.GetResourceDirectory(menuPlugin.Image);
                 item.Image = CommonToolkit.GetResourceImage(imagePath);
             }
-            item.Text = (menuEntity.Caption.Equals(string.Empty) || menuEntity.Caption.Equals(null)) ? CommonToolkit.GetLastString(menuEntity.Path) : menuEntity.Caption;
+            item.Text = (menuPlugin.Caption.Equals(string.Empty) || menuPlugin.Caption.Equals(null)) ? CommonToolkit.GetLastString(menuPlugin.Path) : menuPlugin.Caption;
             return item;
         }
 

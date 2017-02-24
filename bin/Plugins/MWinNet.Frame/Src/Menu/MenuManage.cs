@@ -20,7 +20,7 @@ namespace MWinNet.Frame
                 {
                     if (i == paths.Count - 1)
                     {
-                        curItem = _menuFactory.GetMenuItem(plugin.PluginEntity as MenuPlugin);
+                        curItem = _menuFactory.GetMenuItem(plugin.PluginBase as MenuPlugin);
                     }
                     else
                     {

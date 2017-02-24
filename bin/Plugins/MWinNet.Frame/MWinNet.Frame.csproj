@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="CSkin">
       <HintPath>..\..\library\CSkin.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Src\Application\FrameApplication.cs" />
+    <Compile Include="Src\Application\ApplicationCore.cs" />
     <Compile Include="Src\Dock\DockManage.cs" />
     <Compile Include="Src\Dock\DockPanelInstance.cs" />
     <Compile Include="Src\Dock\DockWindowCollection.cs" />
@@ -64,7 +65,7 @@
     <Compile Include="Src\Menu\MenuItemContainer.cs" />
     <Compile Include="Src\Menu\MenuItemFactory.cs" />
     <Compile Include="Src\Menu\MenuManage.cs" />
-    <Compile Include="Src\Application\ApplicationConstructor.cs" />
+    <Compile Include="Src\Application\ApplicationSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Src\ViewContent\Interface\IViewContent.cs" />
     <Compile Include="Src\WorkBench\WorkBench.cs">

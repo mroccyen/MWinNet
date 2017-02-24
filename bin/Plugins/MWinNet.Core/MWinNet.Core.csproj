@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assembly\AssemblyInstance.cs" />
-    <Compile Include="Plugin\Entity\DockBarPlugin.cs" />
-    <Compile Include="Plugin\Entity\PluginBase.cs" />
+    <Compile Include="Plugin\PluginProperty\DockBarPlugin.cs" />
+    <Compile Include="Plugin\PluginProperty\PluginBase.cs" />
     <Compile Include="Plugin\Plugin.cs" />
     <Compile Include="Plugin\PluginManager.cs" />
     <Compile Include="Plugin\PluginTree.cs" />
@@ -56,7 +56,7 @@
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Command\IStatusUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Plugin\Entity\MenuPlugin.cs" />
+    <Compile Include="Plugin\PluginProperty\MenuPlugin.cs" />
     <Compile Include="ToolKit\PluginConfig.cs" />
     <Compile Include="ToolKit\PluginType.cs" />
   </ItemGroup>

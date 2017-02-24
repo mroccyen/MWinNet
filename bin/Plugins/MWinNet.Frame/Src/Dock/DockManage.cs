@@ -49,7 +49,7 @@ namespace MWinNet.Frame
 
         public void SetupDockBar(Plugin plugin)
         {
-            DockBarPlugin dockPlugin = plugin.PluginEntity as DockBarPlugin;
+            DockBarPlugin dockPlugin = plugin.PluginBase as DockBarPlugin;
             if (dockPlugin == null)
             {
                 throw new NullReferenceException();
@@ -58,7 +58,7 @@ namespace MWinNet.Frame
                && dockPlugin.DockWindowClass != string.Empty && dockPlugin.DockWindowClass != null)
             {
                 DockState state = GetDockState(dockPlugin.DockType);
-                string assemblyPath = AssemblyInstance.GetDll(plugin.PluginEntity.AssemblyName);
+                string assemblyPath = AssemblyInstance.GetDll(plugin.PluginBase.AssemblyName);
                 ToolWindow window = AssemblyInstance.ActivateObject<ToolWindow>(assemblyPath, dockPlugin.DockWindowClass);
                 window.Show(DockPanelInstance.Instance, state);
             }

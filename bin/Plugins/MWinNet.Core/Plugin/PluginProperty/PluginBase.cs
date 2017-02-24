@@ -24,7 +24,7 @@ namespace MWinNet.Core
             return this.MemberwiseClone();
         }
 
-        public void InitializePlugin()
+        protected void InitializePlugin()
         {
             Plugin.InitializePlugin(this.Clone() as PluginBase);
         }

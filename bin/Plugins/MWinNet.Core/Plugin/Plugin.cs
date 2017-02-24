@@ -4,16 +4,16 @@
     {
         #region 属性
 
-        private PluginBase _pluginEntity;
-        public PluginBase PluginEntity
+        private PluginBase _pluginBase;
+        public PluginBase PluginBase
         {
             get
             {
-                return _pluginEntity;
+                return _pluginBase;
             }
             set
             {
-                _pluginEntity = value;
+                _pluginBase = value;
             }
         }
 
@@ -24,10 +24,10 @@
             return null;
         }
 
-        public static void InitializePlugin(PluginBase entity)
+        public static void InitializePlugin(PluginBase pluginBase)
         {
-            PluginTree.Instance.Plugins.Add(new Plugin() { PluginEntity = entity });
-            PluginTree.Instance.SetupPluginTreeNode(new Plugin() { PluginEntity = entity });
+            PluginTree.Instance.Plugins.Add(new Plugin() { PluginBase = pluginBase });
+            PluginTree.Instance.SetupPluginTreeNode(new Plugin() { PluginBase = pluginBase });
         }
 
     }

@@ -5,3 +5,4 @@ E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.dll
 E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.pdb
 E:\GitHub\MWinNet\bin\MWinNet.Dock.dll
 E:\GitHub\MWinNet\bin\MWinNet.Dock.pdb
+E:\GitHub\MWinNet\bin\Plugins\MWinNet.Dock\obj\Debug\MWinNet.Dock.csprojResolveAssemblyReference.cache

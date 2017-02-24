@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\library\CSkin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -82,14 +86,17 @@
     <ProjectReference Include="..\MWinNet.Core\MWinNet.Core.csproj">
       <Project>{030878cd-2f6d-4ac4-a3c7-353b4d96c467}</Project>
       <Name>MWinNet.Core</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\MWinNet.Dock\MWinNet.Dock.csproj">
       <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
       <Name>MWinNet.Dock</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\MWinNet.Frame\MWinNet.Frame.csproj">
       <Project>{60705ed7-a5fc-49be-87a9-918b11a1c33f}</Project>
       <Name>MWinNet.Frame</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

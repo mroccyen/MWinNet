@@ -13,7 +13,7 @@ namespace MWinNet.MainFrame
         public override void Run()
         {
             //System.Windows.Forms.MessageBox.Show("Create!");
-            System.Windows.Forms.MessageBox.Show(FrameApplication.ActiveApplication.ActiveMidWindow.ViewControl.Name);
+            System.Windows.Forms.MessageBox.Show(ApplicationCore.ActiveApplication.ActiveMidWindow.ViewControl.Name);
             //FrameApplication.ActiveApplication.ActiveMidWindowChanged += ActiveApplication_ActiveMidWindowChanged;
         }
 

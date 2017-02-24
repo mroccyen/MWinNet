@@ -3,10 +3,10 @@ using System;
 
 namespace MWinNet.Frame
 {
-    public class FrameApplication
+    public class ApplicationCore
     {
-        private static FrameApplication _app = new FrameApplication();
-        public static FrameApplication ActiveApplication
+        private static ApplicationCore _app = new ApplicationCore();
+        public static ApplicationCore ActiveApplication
         {
             get
             {
@@ -19,7 +19,7 @@ namespace MWinNet.Frame
         public delegate void ActiveWindowChangeHandler(object sender, EventArgs e);
         public event ActiveWindowChangeHandler ActiveWindowChanged;
 
-        internal FrameApplication()
+        internal ApplicationCore()
         {
             DockPanelInstance.Instance.ActiveDocumentChanged += Instance_ActiveDocumentChanged;
             DockPanelInstance.Instance.ActiveContentChanged += Instance_ActiveContentChanged;

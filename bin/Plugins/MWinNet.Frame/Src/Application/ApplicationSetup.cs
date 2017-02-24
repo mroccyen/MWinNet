@@ -3,7 +3,7 @@ using MWinNet.Core;
 
 namespace MWinNet.Frame
 {
-    public class ApplicationConstructor
+    public class ApplicationSetup
     {
         private PluginTree _pluginTree = PluginTree.Instance;
         private MenuManage _menuManager = new MenuManage();
@@ -20,7 +20,7 @@ namespace MWinNet.Frame
             ConfigureFrame();
             foreach (var plugin in _pluginTree.Plugins)
             {
-                string curpath = plugin.PluginEntity.Path;
+                string curpath = plugin.PluginBase.Path;
                 //如果插件为MenuItem
                 if (curpath.Contains(PluginConfig.MENUITEM))
                 {

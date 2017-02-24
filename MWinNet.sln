@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MWinNet.Main", "MWinNet.Main", "{64F03876-E546-4CA3-8DB0-2891BEE1137B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MWinNet.AddIn", "MWinNet.AddIn", "{E88C5DCC-BC7B-4E25-BED4-E11D401C009C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MWinNet.Plugin", "MWinNet.Plugin", "{E88C5DCC-BC7B-4E25-BED4-E11D401C009C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWinNet.Core", "bin\Plugins\MWinNet.Core\MWinNet.Core.csproj", "{030878CD-2F6D-4AC4-A3C7-353B4D96C467}"
 EndProject

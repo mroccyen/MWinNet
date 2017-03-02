@@ -1,0 +1,15 @@
+E:\GitHub\MWinNet\MWinNet.StartUp\bin\Debug\MWinNet.StartUp.exe.config
+E:\GitHub\MWinNet\MWinNet.StartUp\bin\Debug\MWinNet.StartUp.exe
+E:\GitHub\MWinNet\MWinNet.StartUp\bin\Debug\MWinNet.StartUp.pdb
+E:\GitHub\MWinNet\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.Properties.Resources.resources
+E:\GitHub\MWinNet\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.csproj.GenerateResource.Cache
+E:\GitHub\MWinNet\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.exe
+E:\GitHub\MWinNet\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.pdb
+E:\GitHub\MWinNet\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.FormMain.resources
+E:\GitHub\MWinNet\bin\MWinNet.exe
+E:\GitHub\MWinNet\bin\MWinNet.pdb
+E:\GitHub\MWinNet\Environment\MWinNet.StartUp\obj\Debug\MWinNet.exe
+E:\GitHub\MWinNet\Environment\MWinNet.StartUp\obj\Debug\MWinNet.pdb
+E:\GitHub\MWinNet\Environment\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.csprojResolveAssemblyReference.cache
+E:\GitHub\MWinNet\Environment\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.Properties.Resources.resources
+E:\GitHub\MWinNet\Environment\MWinNet.StartUp\obj\Debug\MWinNet.StartUp.csproj.GenerateResource.Cache

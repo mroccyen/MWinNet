@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60705ED7-A5FC-49BE-87A9-918B11A1C33F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MWinNet.Frame</RootNamespace>
+    <AssemblyName>MWinNet.Frame</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\library\CSkin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Src\Application\ApplicationCore.cs" />
+    <Compile Include="Src\Dock\DockManager.cs" />
+    <Compile Include="Src\Dock\DockPanelSingleton.cs" />
+    <Compile Include="Src\Dock\DockWindowCollection.cs" />
+    <Compile Include="Src\Dock\Window\ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Src\Dock\Window\ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Src\Menu\Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\Menu\MenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\Menu\MenuItemContainer.cs" />
+    <Compile Include="Src\Menu\MenuItemFactory.cs" />
+    <Compile Include="Src\Menu\MenuManage.cs" />
+    <Compile Include="Src\Application\ApplicationSetup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\PluginConfig.cs" />
+    <Compile Include="Src\ToolBar\ToolBarButton\ToolBarButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\ToolBar\ToolBarButton\ToolBarButtonSetup.cs" />
+    <Compile Include="Src\ToolBar\ToolBarComboBox\ToolBarComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\ToolBar\ToolBarSeparator\ToolBarSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\ToolBar\ToolBarSeparator\ToolBarSeparatorSetup.cs" />
+    <Compile Include="Src\ToolBar\ToolBarSingleton.cs" />
+    <Compile Include="Src\ToolBar\ToolBarToolkit.cs" />
+    <Compile Include="Src\ViewContent\Interface\IViewContent.cs" />
+    <Compile Include="Src\WorkBench\WorkBench.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Src\WorkBench\WorkBench.Designer.cs">
+      <DependentUpon>WorkBench.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Src\WorkBench\WorkBenchSingleton.cs" />
+    <Compile Include="Src\ToolBar\ToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MWinNet.Core\MWinNet.Core.csproj">
+      <Project>{030878cd-2f6d-4ac4-a3c7-353b4d96c467}</Project>
+      <Name>MWinNet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MWinNet.Dock\MWinNet.Dock.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>MWinNet.Dock</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Src\Dock\Window\ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\WorkBench\WorkBench.resx">
+      <DependentUpon>WorkBench.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

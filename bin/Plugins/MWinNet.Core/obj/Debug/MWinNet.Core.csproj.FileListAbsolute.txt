@@ -1,8 +1,0 @@
-E:\GitHub\MWinNet\MWinNet.Core\bin\Debug\MWinNet.Core.dll
-E:\GitHub\MWinNet\MWinNet.Core\bin\Debug\MWinNet.Core.pdb
-E:\GitHub\MWinNet\MWinNet.Core\obj\Debug\MWinNet.Core.dll
-E:\GitHub\MWinNet\MWinNet.Core\obj\Debug\MWinNet.Core.pdb
-E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\obj\Debug\MWinNet.Core.dll
-E:\GitHub\MWinNet\bin\Plugins\MWinNet.Core\obj\Debug\MWinNet.Core.pdb
-E:\GitHub\MWinNet\bin\MWinNet.Core.dll
-E:\GitHub\MWinNet\bin\MWinNet.Core.pdb

@@ -1,0 +1,96 @@
+﻿<Plugin  name="FrameConfig" author="mroccyen" version="1.0.0" description="" initialized="true">
+  <Menu>
+    <MenuTab path="/MWinNet/Menu/File" id="File" label="File(F)"  index="0"></MenuTab>
+    <MenuTab path="/MWinNet/Menu/View" id="View" label="View(V)" index="1"></MenuTab>
+    <MenuTab path="/MWinNet/Menu/Debug" id="Debug"  label="Debug(D)" index="2"></MenuTab>
+    <MenuTab path="/MWinNet/Menu/Tool" id="Tool"  label="Tool(T)" index="3"></MenuTab>
+    <MenuItem path="/MWinNet/Menu/File/Create"
+              id="Create"
+              label="Create2"
+              image="Resource\MainFrame\Test.png"
+              index="0"
+              assemblyName="MWinNet.MainFrame.dll"
+              className="MWinNet.MainFrame.CreateCommand">
+    </MenuItem>
+    <MenuDropGroup path="/MWinNet/Menu/File/Open" id="Open" label="Open1" image="" index="1">
+      <MenuItem path="/MWinNet/Menu/File/Open/Project" id="Project" label="Project1" image="" index="0"></MenuItem>
+      <MenuItem path="/MWinNet/Menu/File/Open/TreeLir" id="TreeLir" label="TreeLir1"  image="Resource\MainFrame\Test.png" index="1">
+      </MenuItem>
+    </MenuDropGroup>
+    <MenuItem path="/MWinNet/Menu/View/Window/Windows"  id="Windows"  label="Windows1"  image="" index="0"></MenuItem>
+    <MenuDropGroup path="/MWinNet/Menu/View/Window/Browser" id="Browser" label="Browser1"   image="" index="1">
+      <MenuItem path="/MWinNet/Menu/View/Dock"
+                id="Dock"
+                label="Dock1"
+                image="Resource\MainFrame\Open.png"
+                index="1"
+                assemblyName="MWinNet.MainFrame.dll"
+                className="MWinNet.MainFrame.CreateCommand">
+      </MenuItem>
+    </MenuDropGroup>
+    <MenuItem path="/MWinNet/Menu/Tool/Update" id="Update" label="Update"  image="" index="0"></MenuItem>
+  </Menu>
+
+  <DockBar>
+    <DockItem path="/MWinNet/DockBar/Frame/Left"
+              id="Left"
+              dockType="DockLeft"
+              dockWindowClass="MWinNet.MainFrame.WorkTreeWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Right"
+              id="Right"
+              dockType="DockRightAutoHide"
+              dockWindowClass="MWinNet.MainFrame.WorkPropertyWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Middle"
+              id="Middle"
+              dockType="Document"
+              dockWindowClass="MWinNet.MainFrame.WorkMidWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Middle"
+              id="Middle"
+              dockType="Document"
+              dockWindowClass="MWinNet.MainFrame.WorkMidWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+    <DockItem path="/MWinNet/DockBar/Frame/Buttom"
+              id="Buttom"
+              dockType="DockBottomAutoHide"
+              dockWindowClass="MWinNet.MainFrame.OutputWindow"
+              assemblyName="MWinNet.MainFrame.dll">
+    </DockItem>
+  </DockBar>
+
+  <ToolBar>
+    <!--displayStyle="Image"||"Text"||"ImageAndText"-->
+    <ToolBarButton path="/MWinNet/ToolBar/ToolBarButton/Open"
+              id="open"
+              displayStyle="ImageAndText"
+              image="Resource\MainFrame\Open.png"
+              label="Open"
+              index="0"
+              assemblyName="MWinNet.MainFrame.dll"
+              className="MWinNet.MainFrame.CreateCommand">
+    </ToolBarButton>
+    <ToolBarSeparator path="/MWinNet/ToolBar/ToolBarSeparator/1" id="1"></ToolBarSeparator>
+    <ToolBarButton path="/MWinNet/ToolBar/ToolBarButton/Open1"
+                id="open1"
+                displayStyle="Image"
+                image="Resource\MainFrame\Test.png"
+                label="Open1"
+                index="1"
+                assemblyName="MWinNet.MainFrame.dll"
+                className="MWinNet.MainFrame.CreateCommand">
+    </ToolBarButton>
+    <ToolBarSeparator path="/MWinNet/ToolBar/ToolBarSeparator/2" id="2"></ToolBarSeparator>
+    <ToolBarComboBox path="/MWinNet/ToolBar/ToolBarComboBox/1" id="">
+      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/1/Item/1" id="1" label="长度测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
+      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/1/Item/2" id="2" label="面积测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
+      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/1/Item/3" id="3" label="高度测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
+    </ToolBarComboBox>
+  </ToolBar>
+
+</Plugin>

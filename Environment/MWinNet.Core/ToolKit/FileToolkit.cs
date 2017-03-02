@@ -27,7 +27,7 @@ namespace MWinNet.Core
         public static string GetResourceDirectory(string imgPath)
         {
             string exePath = Environment.CurrentDirectory;
-            DirectoryInfo info = new DirectoryInfo(Directory.GetParent(exePath).FullName);
+            DirectoryInfo info = new DirectoryInfo(exePath);
             if (!imgPath.StartsWith("\\"))
             {
                 return info.FullName + "\\" + imgPath;

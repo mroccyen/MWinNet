@@ -68,6 +68,10 @@
     <Compile Include="Src\Application\ApplicationSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Src\PluginConfig.cs" />
+    <Compile Include="Src\StatusBar\StatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\StatusBar\StatusBarSingleton.cs" />
     <Compile Include="Src\ToolBar\ToolBarButton\ToolBarButton.cs">
       <SubType>Component</SubType>
     </Compile>

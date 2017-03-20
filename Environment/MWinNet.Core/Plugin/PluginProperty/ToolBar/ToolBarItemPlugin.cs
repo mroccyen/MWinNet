@@ -30,6 +30,10 @@ namespace MWinNet.Core
                             ToolBarSeparatorPlugin separatorPlugin = new ToolBarSeparatorPlugin();
                             separatorPlugin.SetupPlugin(reader);
                             break;
+                        case "ToolBarComboBox":
+                            ToolBarComboBoxPlugin comboBoxPlugin = new ToolBarComboBoxPlugin();
+                            comboBoxPlugin.SetupPlugin(reader);
+                            break;
                     }
                 }
             }

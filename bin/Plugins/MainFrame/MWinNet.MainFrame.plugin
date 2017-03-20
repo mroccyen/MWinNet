@@ -86,11 +86,16 @@
                 className="MWinNet.MainFrame.CreateCommand">
     </ToolBarButton>
     <ToolBarSeparator path="/MWinNet/ToolBar/ToolBarSeparator/2" id="2"></ToolBarSeparator>
-    <ToolBarComboBox path="/MWinNet/ToolBar/ToolBarComboBox/1" id="">
-      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/1/Item/1" id="1" label="长度测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
-      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/1/Item/2" id="2" label="面积测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
-      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/1/Item/3" id="3" label="高度测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
-    </ToolBarComboBox>
+    <!--<ToolBarComboBox path="/MWinNet/ToolBar/ToolBarComboBox/Meature" id="meature">
+      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/Meature/Item1" id="Item1" label="长度测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
+      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/Meature/Item2" id="Item2" label="面积测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
+      <ToolBarComboBoxItem path="/MWinNet/ToolBar/ToolBarComboBox/Meature/Item3" id="Item3" label="高度测量"  assemblyName="MWinNet.MainFrame.dll" className="MWinNet.MainFrame.CreateCommand"></ToolBarComboBoxItem>
+    </ToolBarComboBox>-->
   </ToolBar>
+
+  <StatusBar>
+    <StatusProgressBar path="/MWinNet/StatusBar/ProgressBar/1" id="1" value="50"></StatusProgressBar>
+    <StatusLabel path="" id="" label=""></StatusLabel>
+  </StatusBar>
 
 </Plugin>

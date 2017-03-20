@@ -7,39 +7,42 @@ using System.Xml;
 
 namespace MWinNet.Core
 {
-    public class ToolBarComboBoxPlugin : PluginBase
+    public class ToolBarComboBoxItemPlugin : PluginBase
     {
         public string Id
         {
             get; set;
         }
 
+        public string Label
+        {
+            get; set;
+        }
 
         public void SetupPlugin(XmlReader reader)
         {
             do
             {
                 if (reader.NodeType == XmlNodeType.EndElement
-                 && reader.LocalName.Equals("ToolBarComboBox"))
+                 && reader.LocalName.Equals("ToolBarComboBoxItem"))
                 {
                     break;
                 }
-                if (reader.LocalName.Equals("ToolBarComboBox") && reader.IsStartElement())
+                if (reader.LocalName.Equals("ToolBarComboBoxItem") && reader.IsStartElement())
                 {
                     this.Path = reader.GetAttribute("path");
                     this.Id = reader.GetAttribute("id");
+                    this.Label = reader.GetAttribute("label");
+                    this.AssemblyName = reader.GetAttribute("assemblyName");
+                    this.ClassName = reader.GetAttribute("className");
 
                     //初始化插件
                     InitializePlugin();
-                    reader.MoveToElement();
-                }
-                if (reader.LocalName.Equals("ToolBarComboBoxItem") && reader.IsStartElement())
-                {
-                    ToolBarComboBoxItemPlugin comboBoxItemPlugin = new ToolBarComboBoxItemPlugin();
-                    comboBoxItemPlugin.SetupPlugin(reader);
+                    reader.MoveToElement(); 
                 }
             }
             while (reader.Read());
+
         }
     }
 }

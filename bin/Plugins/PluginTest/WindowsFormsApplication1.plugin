@@ -7,7 +7,7 @@
   <Menu>
     <MenuItem path="/MWinNet/Menu/Debug/Pluign"
               id="plugin"
-              label="插件"
+              label="插件111"
               image="Resource\MainFrame\Test.png"
               index="0"
               assemblyName="WindowsFormsApplication1.dll"

@@ -61,32 +61,32 @@ namespace MWinNet.Dock
 
         public VisibleNestedPaneCollection VisibleNestedPanes
         {
-            get	{	return NestedPanes.VisibleNestedPanes;	}
+            get { return NestedPanes.VisibleNestedPanes; }
         }
 
         public NestedPaneCollection NestedPanes
         {
-            get	{	return m_nestedPanes;	}
+            get { return m_nestedPanes; }
         }
 
         public DockPanel DockPanel
         {
-            get	{	return m_dockPanel;	}
+            get { return m_dockPanel; }
         }
 
         public DockState DockState
         {
-            get	{	return m_dockState;	}
+            get { return m_dockState; }
         }
 
         public bool IsFloat
         {
-            get	{	return DockState == DockState.Float;	}
+            get { return DockState == DockState.Float; }
         }
 
         internal DockPane DefaultPane
         {
-            get	{	return VisibleNestedPanes.Count == 0 ? null : VisibleNestedPanes[0];	}
+            get { return VisibleNestedPanes.Count == 0 ? null : VisibleNestedPanes[0]; }
         }
 
         public virtual Rectangle DisplayingRectangle
@@ -104,7 +104,9 @@ namespace MWinNet.Dock
                 }
                 // exclude the splitter
                 else if (DockState == DockState.DockLeft)
+                {
                     rect.Width -= Measures.SplitterSize;
+                }
                 else if (DockState == DockState.DockRight)
                 {
                     rect.X += Measures.SplitterSize;
@@ -136,7 +138,7 @@ namespace MWinNet.Dock
                 VisibleNestedPanes.Refresh();
             }
 
-            base.OnLayout (levent);
+            base.OnLayout(levent);
         }
 
         #region ISplitterDragSource Members

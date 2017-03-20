@@ -31,7 +31,7 @@
 IViewContent接口是给DockWindow中添加控件的接口，每个实现了IViewContent接口的类都有与之对应的DockWindow，控件的初始化就可以放在实现了IViewContent接口的类中。
 
 #### MWinNet.Dock
-类库基于WeifenLuo.WinFormsUI.Docking修改而来。
+类库基于WeifenLuo.WinFormsUI.Docking修改而来，支持浮动窗口的所有特性。
 
 ## 框架指南
 

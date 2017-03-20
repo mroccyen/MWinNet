@@ -5,7 +5,7 @@ namespace MWinNet.Frame
 {
     public class ApplicationSetup
     {
-        private PluginTree _pluginTree = PluginTree.Instance;
+        private PluginTree _pluginTree = PluginTree.Singleton;
         private MenuManage _menuManager = new MenuManage();
         private DockManager _dockManage = new DockManager();
         private ToolBarButtonSetup _toolbarButtonSetup = new ToolBarButtonSetup();
@@ -39,9 +39,23 @@ namespace MWinNet.Frame
                 {
                     InitializeToolBar(plugin);
                 }
+                //如果插件为StatusBar
+                if (curpath.Contains(PluginConfig.STATUSBAR))
+                {
+                    InitializeStatusBar(plugin);
+                }
             }
             //初始化菜单
             _menuManager.SetupMenuItem();
+        }
+
+        private void InitializeStatusBar(Plugin plugin)
+        {
+            string path = plugin.PluginBase.Path;
+            if (path.Contains(PluginConfig.STATUSBARPROGRESSBAR))
+            {
+
+            }
         }
 
         private void InitializeToolBar(Plugin plugin)
@@ -54,6 +68,10 @@ namespace MWinNet.Frame
             if (path.Contains(PluginConfig.TOOLBARSEPARASTOR))
             {
                 _toolBarSeparatorSetup.Setup(plugin);
+            }
+            if (path.Contains(PluginConfig.TOOLBARCOMBOBOX))
+            {
+
             }
         }
 

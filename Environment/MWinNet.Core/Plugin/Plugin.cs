@@ -26,8 +26,8 @@
 
         public static void InitializePlugin(PluginBase pluginBase)
         {
-            PluginTree.Instance.Plugins.Add(new Plugin() { PluginBase = pluginBase });
-            PluginTree.Instance.SetupPluginTreeNode(new Plugin() { PluginBase = pluginBase });
+            PluginTree.Singleton.Plugins.Add(new Plugin() { PluginBase = pluginBase });
+            PluginTree.Singleton.SetupPluginTreeNode(new Plugin() { PluginBase = pluginBase });
         }
 
     }

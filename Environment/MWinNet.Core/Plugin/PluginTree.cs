@@ -8,16 +8,16 @@ namespace MWinNet.Core
 {
     public class PluginTree
     {
-        private static PluginTree _instance;
-        public static PluginTree Instance
+        private static PluginTree _singleton;
+        public static PluginTree Singleton
         {
             get
             {
-                if (_instance == null)
+                if (_singleton == null)
                 {
-                    return _instance = new PluginTree();
+                    return _singleton = new PluginTree();
                 }
-                return _instance;
+                return _singleton;
             }
         }
 
@@ -53,7 +53,7 @@ namespace MWinNet.Core
             SetupPluginTreeNode(_rootNode, treeNode, pathList, 0);
         }
 
-        private void SetupPluginTreeNode(PluginTreeNode currentNode, PluginTreeNode p, List<string> pathList, int index)
+        private void SetupPluginTreeNode(PluginTreeNode currentNode, PluginTreeNode needSetNode, List<string> pathList, int index)
         {
             if (index >= pathList.Count)
             {
@@ -63,22 +63,21 @@ namespace MWinNet.Core
             {
                 if (index == pathList.Count - 1)
                 {
-                    currentNode.SetPlugin(p.Plugin);
+                    currentNode.SetPlugin(needSetNode.Plugin);
                 }
-                SetupPluginTreeNode(currentNode.ChildNodes[pathList[index]], p, pathList, ++index);
+                SetupPluginTreeNode(currentNode.ChildNodes[pathList[index]], needSetNode, pathList, ++index);
             }
             else
             {
-                PluginTreeNode pn = new PluginTreeNode();
-                currentNode.ChildNodes.Add(pathList[index], pn);
+                PluginTreeNode newNode = new PluginTreeNode();
+                currentNode.ChildNodes.Add(pathList[index], newNode);
                 if (index == pathList.Count - 1)
                 {
-                    pn.SetPlugin(p.Plugin);
+                    newNode.SetPlugin(needSetNode.Plugin);
                 }
-                SetupPluginTreeNode(pn, p, pathList, ++index);
+                SetupPluginTreeNode(newNode, needSetNode, pathList, ++index);
             }
         }
-
 
     }
 }

@@ -9,6 +9,9 @@ namespace MWinNet.Frame
 {
     public class ToolBarComboBox : ToolStripComboBox
     {
+        public ToolBarComboBox()
+        {
 
+        }
     }
 }

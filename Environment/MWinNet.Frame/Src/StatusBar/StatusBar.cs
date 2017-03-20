@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace MWinNet.Frame
 {
-    public class ToolBar : ToolStrip
+    public class StatusBar : StatusStrip
     {
         public void Add(ToolStripItem item)
         {
-            //ToolBarSingleton.MainToolbar.Items.Add(item);
+            //StatusBarSingleton.MainStatusBar.Items.Add(item);
             this.Items.Add(item);
         }
     }

@@ -47,12 +47,15 @@
     <Compile Include="Plugin\PluginProperty\PluginBase.cs" />
     <Compile Include="Plugin\Plugin.cs" />
     <Compile Include="Plugin\PluginManager.cs" />
+    <Compile Include="Plugin\PluginProperty\StatusBar\StatusProgressBarPlugin.cs" />
+    <Compile Include="Plugin\PluginProperty\StatusBar\StatusItemPlugin.cs" />
     <Compile Include="Plugin\PluginProperty\ToolBar\ToolBarButtonPlugin.cs" />
     <Compile Include="Plugin\PluginProperty\ToolBar\ToolBarComboBoxPlugin.cs" />
     <Compile Include="Plugin\PluginProperty\ToolBar\ToolBarItemPlugin.cs" />
     <Compile Include="Plugin\PluginProperty\ToolBar\ToolBarSeparatorPlugin.cs" />
     <Compile Include="Plugin\PluginTree.cs" />
     <Compile Include="Plugin\PluginTreeNode.cs" />
+    <Compile Include="Plugin\PluginProperty\ToolBar\ToolBarComboBoxItemPlugin.cs" />
     <Compile Include="ToolKit\FileToolkit.cs" />
     <Compile Include="ToolKit\ImageToolkit.cs" />
     <Compile Include="ToolKit\StringToolkit.cs" />

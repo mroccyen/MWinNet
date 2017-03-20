@@ -45,6 +45,10 @@ namespace MWinNet.Core
                                 ToolBarItemPlugin toolBarItemPlugin = new ToolBarItemPlugin();
                                 toolBarItemPlugin.SetupPlugin(reader);
                                 break;
+                            case "StatusBar":
+                                StatusItemPlugin statusItemPlugin = new StatusItemPlugin();
+                                statusItemPlugin.SetupPlugin(reader);
+                                break;
                         }
                     }
                 }

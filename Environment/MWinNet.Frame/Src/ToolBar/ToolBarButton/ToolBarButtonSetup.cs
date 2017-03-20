@@ -26,8 +26,7 @@ namespace MWinNet.Frame
             {
                 toolButton = new ToolBarButton(null);
             }
-            if (toolPlugin.Image != string.Empty
-                && toolPlugin.Image != null)
+            if (toolPlugin.Image != string.Empty && toolPlugin.Image != null)
             {
                 string imagePath = CommonToolkit.GetResourceDirectory(toolPlugin.Image);
                 toolButton.Image = CommonToolkit.GetResourceImage(imagePath);

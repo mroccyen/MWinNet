@@ -24,7 +24,7 @@ namespace MWinNet.Frame
             }
             else
             {
-                toolButton = new ToolBarButton(null);
+                toolButton = new ToolBarButton();
             }
             if (toolPlugin.Image != string.Empty && toolPlugin.Image != null)
             {

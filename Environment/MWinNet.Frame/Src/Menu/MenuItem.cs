@@ -8,7 +8,7 @@ namespace MWinNet.Frame
     {
         private Command _command;
 
-        public MenuItem(Command cmd)
+        public MenuItem(Command cmd = null)
         {
             this._command = cmd;
             this.Enabled = _command == null ? true : _command.Enable();

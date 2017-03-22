@@ -72,6 +72,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Src\StatusBar\StatusBarSingleton.cs" />
+    <Compile Include="Src\StatusBar\StatusProgressBar\StatusProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\StatusBar\StatusProgressBar\StatusProgressBarSetup.cs" />
     <Compile Include="Src\ToolBar\ToolBarButton\ToolBarButton.cs">
       <SubType>Component</SubType>
     </Compile>

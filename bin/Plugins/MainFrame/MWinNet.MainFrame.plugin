@@ -94,7 +94,7 @@
   </ToolBar>
 
   <StatusBar>
-    <StatusProgressBar path="/MWinNet/StatusBar/ProgressBar/1" id="1" value="50"></StatusProgressBar>
+    <StatusProgressBar path="/MWinNet/StatusBar/ProgressBar/1" id="1" value="50" length="250"></StatusProgressBar>
     <StatusLabel path="" id="" label=""></StatusLabel>
   </StatusBar>
 

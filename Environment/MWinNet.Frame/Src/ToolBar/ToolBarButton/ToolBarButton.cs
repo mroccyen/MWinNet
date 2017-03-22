@@ -12,7 +12,7 @@ namespace MWinNet.Frame
     {
         private Command _cmd;
 
-        public ToolBarButton(Command cmd)
+        public ToolBarButton(Command cmd = null)
         {
             _cmd = cmd;
             if (cmd != null)

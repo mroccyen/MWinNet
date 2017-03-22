@@ -10,6 +10,7 @@ namespace MWinNet.Frame
         private DockManager _dockManage = new DockManager();
         private ToolBarButtonSetup _toolbarButtonSetup = new ToolBarButtonSetup();
         private ToolBarSeparatorSetup _toolBarSeparatorSetup = new ToolBarSeparatorSetup();
+        private StatusProgressBarSetup _statusProgressBarSetup = new StatusProgressBarSetup();
 
         public void Initialize()
         {
@@ -54,7 +55,7 @@ namespace MWinNet.Frame
             string path = plugin.PluginBase.Path;
             if (path.Contains(PluginConfig.STATUSBARPROGRESSBAR))
             {
-
+                _statusProgressBarSetup.Setup(plugin);
             }
         }
 
@@ -78,6 +79,7 @@ namespace MWinNet.Frame
         private void ConfigureFrame()
         {
             WorkBenchSingleton.Singleton.AddControl(DockPanelSingleton.MainDockPanel);
+            WorkBenchSingleton.Singleton.AddControl(StatusBarSingleton.MainStatusBar);
             WorkBenchSingleton.Singleton.AddControl(ToolBarSingleton.MainToolbar);
             WorkBenchSingleton.Singleton.AddControl(Menu.Singleton.MainMenu);
         }

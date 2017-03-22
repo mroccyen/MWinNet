@@ -17,7 +17,7 @@ namespace MWinNet.Frame
             }
             else
             {
-                item = new MenuItem(null);
+                item = new MenuItem();
             }
             if (menuPlugin.Image != string.Empty && menuPlugin.Image != null)
             {
@@ -30,7 +30,7 @@ namespace MWinNet.Frame
 
         public MenuItem GetMenuItem(string label)
         {
-            MenuItem item = new MenuItem(null);
+            MenuItem item = new MenuItem();
             item.Text = label;
             return item;
         }

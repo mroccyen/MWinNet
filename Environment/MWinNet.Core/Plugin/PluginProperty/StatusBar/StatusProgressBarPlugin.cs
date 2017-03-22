@@ -19,6 +19,11 @@ namespace MWinNet.Core
             get; set;
         }
 
+        public string Length
+        {
+            get; set;
+        }
+
         public void SetupPlugin(XmlReader reader)
         {
             do
@@ -32,6 +37,7 @@ namespace MWinNet.Core
                     this.Path = reader.GetAttribute("path");
                     this.Id = reader.GetAttribute("id");
                     this.Value = reader.GetAttribute("value");
+                    this.Length = reader.GetAttribute("length");
                     this.AssemblyName = reader.GetAttribute("assemblyName");
                     this.ClassName = reader.GetAttribute("className");
 

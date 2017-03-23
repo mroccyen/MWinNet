@@ -34,30 +34,35 @@
   <DockBar>
     <DockItem path="/MWinNet/DockBar/Frame/Left"
               id="Left"
+              label=""
               dockType="DockLeft"
               dockWindowClass="MWinNet.MainFrame.WorkTreeWindow"
               assemblyName="MWinNet.MainFrame.dll">
     </DockItem>
     <DockItem path="/MWinNet/DockBar/Frame/Right"
               id="Right"
+              label=""
               dockType="DockRightAutoHide"
               dockWindowClass="MWinNet.MainFrame.WorkPropertyWindow"
               assemblyName="MWinNet.MainFrame.dll">
     </DockItem>
     <DockItem path="/MWinNet/DockBar/Frame/Middle"
               id="Middle"
+              label=""
               dockType="Document"
               dockWindowClass="MWinNet.MainFrame.WorkMidWindow"
               assemblyName="MWinNet.MainFrame.dll">
     </DockItem>
     <DockItem path="/MWinNet/DockBar/Frame/Middle"
               id="Middle"
+              label=""
               dockType="Document"
               dockWindowClass="MWinNet.MainFrame.WorkMidWindow"
               assemblyName="MWinNet.MainFrame.dll">
     </DockItem>
     <DockItem path="/MWinNet/DockBar/Frame/Buttom"
               id="Buttom"
+              label=""
               dockType="DockBottomAutoHide"
               dockWindowClass="MWinNet.MainFrame.OutputWindow"
               assemblyName="MWinNet.MainFrame.dll">

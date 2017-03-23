@@ -60,6 +60,7 @@ namespace MWinNet.Frame
                 DockState state = GetDockState(dockPlugin.DockType);
                 string assemblyPath = AssemblyToolkit.GetDll(plugin.PluginBase.AssemblyName);
                 ToolWindow window = AssemblyToolkit.ActivateObject<ToolWindow>(assemblyPath, dockPlugin.DockWindowClass);
+                window.Text = dockPlugin.Label;
                 window.Show(DockPanelSingleton.MainDockPanel, state);
             }
         }

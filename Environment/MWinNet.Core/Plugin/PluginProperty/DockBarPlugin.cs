@@ -9,6 +9,11 @@ namespace MWinNet.Core
             get; set;
         }
 
+        public string Label
+        {
+            get; set;
+        }
+
         public string DockType
         {
             get; set;
@@ -32,6 +37,7 @@ namespace MWinNet.Core
                 {
                     this.Path = reader.GetAttribute("path");
                     this.Id = reader.GetAttribute("id");
+                    this.Label = reader.GetAttribute("label");
                     this.AssemblyName = reader.GetAttribute("assemblyName");
                     this.DockType = reader.GetAttribute("dockType");
                     this.DockWindowClass = reader.GetAttribute("dockWindowClass");

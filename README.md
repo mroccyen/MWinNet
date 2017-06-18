@@ -170,10 +170,10 @@ DockBar下有DockItem子节点，定义每个浮动窗口的属性。
 - dockWindowClass：浮动窗体对应的窗体类型名，需要加上命名空间。
 - assemblyName：浮动窗体对应的窗体所在的程序集。
 
-### ToolBar节点
+#### ToolBar节点
 ToolBar是工具栏节点。所有工具栏的按钮都定义在ToolBar节点中。
 
-#### ToolBarButton子节点：
+##### ToolBarButton子节点：
 工具栏按钮定义节点。
 
 属性：
@@ -187,7 +187,7 @@ ToolBar是工具栏节点。所有工具栏的按钮都定义在ToolBar节点中
 - assemblyName：所在的程序集。
 - className：按钮命令对应的类名，需要加上命名空间。
 
-#### ToolBarSeparator子节点：
+##### ToolBarSeparator子节点：
 
 分隔标记定义节点。
 
@@ -196,11 +196,11 @@ ToolBar是工具栏节点。所有工具栏的按钮都定义在ToolBar节点中
 - path：每个工具栏分隔标记对应一个路径，该路径会添加进插件树中相应的分支中。
 - id：ToolBarSeparator唯一的标识。
 
-### StatusBar节点
+#### StatusBar节点
 
 StatusBar是状态栏节点，目前只支持了进度条和标签的设置。
 
-#### StatusProgressBar子节点
+##### StatusProgressBar子节点
 
 进度条子节点，可以通过设置实现相应的进度信息展示的功能。
 
@@ -211,7 +211,7 @@ StatusBar是状态栏节点，目前只支持了进度条和标签的设置。
 - value：进度初始值。
 - length：进度条长度。
 
-#### StatusLabel子节点
+##### StatusLabel子节点
 
 状态栏标签。
 

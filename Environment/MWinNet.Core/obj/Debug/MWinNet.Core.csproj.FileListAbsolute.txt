@@ -7,3 +7,8 @@ E:\GitHub\MWinNet\bin\MWinNet.Core.pdb
 E:\GitHub\MWinNet\Environment\MWinNet.Core\obj\Debug\MWinNet.Core.csprojResolveAssemblyReference.cache
 E:\GitHub\MWinNet\Environment\MWinNet.Core\obj\Debug\MWinNet.Core.dll
 E:\GitHub\MWinNet\Environment\MWinNet.Core\obj\Debug\MWinNet.Core.pdb
+E:\01 Github\MWinNet\bin\MWinNet.Core.dll
+E:\01 Github\MWinNet\bin\MWinNet.Core.pdb
+E:\01 Github\MWinNet\Environment\MWinNet.Core\obj\Debug\MWinNet.Core.csprojResolveAssemblyReference.cache
+E:\01 Github\MWinNet\Environment\MWinNet.Core\obj\Debug\MWinNet.Core.dll
+E:\01 Github\MWinNet\Environment\MWinNet.Core\obj\Debug\MWinNet.Core.pdb

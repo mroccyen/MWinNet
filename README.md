@@ -5,7 +5,7 @@
 
 ![](MainForm.jpg)
 
-目前框架的编写已经完成了主菜单、浮动窗体，工具栏和状态栏已经完成了大部分，右键菜单还需要完善。希望大家可以多多提提意见，共同进步，同时如果你觉得这个项目还行，欢迎[fork&star](https://github.com/MrocCyen/MWinNet)。
+目前框架的编写已经完成了主菜单、浮动窗体、工具栏和状态栏，右键菜单还需要完善。希望大家可以多多提提意见，共同进步，同时如果你觉得这个项目还行，欢迎[fork&star](https://github.com/MrocCyen/MWinNet)。
 
 ## 框架结构
 ### 核心结构
@@ -113,6 +113,35 @@ IViewContent接口是给DockWindow中添加控件的接口，每个实现了IVie
     </DockItem>
   </DockBar>
 
+   <ToolBar>
+    <!--displayStyle="Image"||"Text"||"ImageAndText"-->
+    <ToolBarButton path="/MWinNet/ToolBar/ToolBarButton/Open"
+              id="open"
+              displayStyle="ImageAndText"
+              image="Resource\MainFrame\Open.png"
+              label="Open"
+              index="0"
+              assemblyName="MWinNet.MainFrame.dll"
+              className="MWinNet.MainFrame.CreateCommand">
+    </ToolBarButton>
+    <ToolBarSeparator path="/MWinNet/ToolBar/ToolBarSeparator/1" id="1"></ToolBarSeparator>
+    <ToolBarButton path="/MWinNet/ToolBar/ToolBarButton/Open1"
+                id="open1"
+                displayStyle="Image"
+                image="Resource\MainFrame\Test.png"
+                label="Open1"
+                index="1"
+                assemblyName="MWinNet.MainFrame.dll"
+                className="MWinNet.MainFrame.CreateCommand">
+    </ToolBarButton>
+    <ToolBarSeparator path="/MWinNet/ToolBar/ToolBarSeparator/2" id="2"></ToolBarSeparator>
+  </ToolBar>
+
+  <StatusBar>
+    <StatusProgressBar path="/MWinNet/StatusBar/ProgressBar/1" id="1" value="50" length="250"></StatusProgressBar>
+    <StatusLabel path="" id="" label=""></StatusLabel>
+  </StatusBar>
+
 </Plugin>
 ```
 
@@ -140,6 +169,57 @@ DockBar下有DockItem子节点，定义每个浮动窗口的属性。
 - dockType：DockBar的类型，有Float、DockTopAutoHide、DockLeftAutoHide、DockBottomAutoHide、DockRightAutoHide、Document、DockTop、DockLeft、DockBottom和DockRight。
 - dockWindowClass：浮动窗体对应的窗体类型名，需要加上命名空间。
 - assemblyName：浮动窗体对应的窗体所在的程序集。
+
+### ToolBar节点
+ToolBar是工具栏节点。所有工具栏的按钮都定义在ToolBar节点中。
+
+#### ToolBarButton子节点：
+工具栏按钮定义节点。
+
+属性：
+
+- path：每个工具栏按钮对应一个路径，该路径会添加进插件树中相应的分支中。
+- id：ToolBarButton唯一的标识。
+- displayStyle：样式展示类型，有Image、Text和ImageAndText。
+- image：图片路径。
+- label：显示的文本。
+- index：排序索引值。
+- assemblyName：所在的程序集。
+- className：按钮命令对应的类名，需要加上命名空间。
+
+#### ToolBarSeparator子节点：
+
+分隔标记定义节点。
+
+属性：
+
+- path：每个工具栏分隔标记对应一个路径，该路径会添加进插件树中相应的分支中。
+- id：ToolBarSeparator唯一的标识。
+
+### StatusBar节点
+
+StatusBar是状态栏节点，目前只支持了进度条和标签的设置。
+
+#### StatusProgressBar子节点
+
+进度条子节点，可以通过设置实现相应的进度信息展示的功能。
+
+属性：
+
+- path：每个进度条对应一个路径，该路径会添加进插件树中相应的分支中。
+- id：StatusProgressBar唯一的标识。
+- value：进度初始值。
+- length：进度条长度。
+
+#### StatusLabel子节点
+
+状态栏标签。
+
+属性：
+
+- path：每个标签对应一个路径，该路径会添加进插件树中相应的分支中。
+- id：StatusLabel唯一的标识。
+- label：标签的展示文本。
 
 ### Command
 

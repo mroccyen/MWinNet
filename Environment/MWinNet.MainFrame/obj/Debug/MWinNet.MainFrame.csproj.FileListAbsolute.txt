@@ -20,3 +20,13 @@ E:\GitHub\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.Work
 E:\GitHub\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.csproj.GenerateResource.Cache
 E:\GitHub\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.dll
 E:\GitHub\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.pdb
+E:\01 Github\MWinNet\bin\Plugins\MainFrame\MWinNet.MainFrame.dll
+E:\01 Github\MWinNet\bin\Plugins\MainFrame\MWinNet.MainFrame.pdb
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.csprojResolveAssemblyReference.cache
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.OutputWindow.resources
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.WorkMidWindow.resources
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.WorkPropertyWindow.resources
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.WorkTreeWindow.resources
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.csproj.GenerateResource.Cache
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.dll
+E:\01 Github\MWinNet\Environment\MWinNet.MainFrame\obj\Debug\MWinNet.MainFrame.pdb

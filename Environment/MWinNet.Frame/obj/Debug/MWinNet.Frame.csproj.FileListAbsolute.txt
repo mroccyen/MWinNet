@@ -6,3 +6,11 @@ E:\GitHub\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.WorkBench.re
 E:\GitHub\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.csproj.GenerateResource.Cache
 E:\GitHub\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.dll
 E:\GitHub\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.pdb
+E:\01 Github\MWinNet\bin\MWinNet.Frame.dll
+E:\01 Github\MWinNet\bin\MWinNet.Frame.pdb
+E:\01 Github\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.csprojResolveAssemblyReference.cache
+E:\01 Github\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.ToolWindow.resources
+E:\01 Github\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.WorkBench.resources
+E:\01 Github\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.csproj.GenerateResource.Cache
+E:\01 Github\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.dll
+E:\01 Github\MWinNet\Environment\MWinNet.Frame\obj\Debug\MWinNet.Frame.pdb
